@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author GGANPATL
+ *
+ */
+module Abc {
+}
