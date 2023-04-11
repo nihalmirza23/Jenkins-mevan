@@ -30,4 +30,10 @@ public class AppTest
     {
         assertEquals(0, 0);
     }
+    
+    @Test
+    public void shouldAnswerWithfalse()
+    {
+        assertEquals(0, 1);
+    }
 }
