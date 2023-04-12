@@ -7,7 +7,7 @@ job("First-Maven-Project-via-DSL"){
         scm('* * * * *')
     }
     steps{
-        maven("test compile","Jenkins-maven/jenkinsdem0/pom.xml")
+        maven("test compile package","Jenkins-maven/jenkinsdem0/pom.xml")
     }
     publishers{
         archiveArtifacts '**/*.jar'
