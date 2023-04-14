@@ -1,15 +1,16 @@
-pipeline{
+pipeline {
     agent any
-        stages{
-            stage("Build Application"){
-                sh "mvn clean pacakge"
-            }
-            post{
-                success{
-                    echo "Archiving the artifacts"
-                    archiveArtifacts artifacts: "**/*.war"
+        stages {
+            stage('Build Application') {
+                steps {
+                    sh 'mvn clean pacakge'
+                }
+                post {
+                    success {
+                        echo 'Archiving the artifacts'
+                        archiveArtifacts artifacts: '**/*.war'
+                    }
                 }
             }
         }
-    
 }
