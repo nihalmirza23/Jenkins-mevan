@@ -12,10 +12,10 @@ pipeline {
                     }
                 }
             }
-            // stage('Deploy in staging enviorment'){
-            //     steps{
-            //         build job: 'Deploy_Application'
-            //     }
-            // }
+            stage('Deploy in staging enviorment'){
+                steps{
+                    echo "staging env job"
+                }
+            }
         }
 }
