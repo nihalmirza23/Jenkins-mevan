@@ -1,16 +1,16 @@
 pipeline {
     agent any
-        stages {
-            stage('Build Application') {
-                steps {
-                    sh 'mvn -f maven-tomcat/pom.xml test package'
-                }
-                post {
-                    success {
-                        echo 'Archiving the artifacts'
-                        archiveArtifacts artifacts: '**/*.war'
-                    }
+    stages {
+        stage('Build Application') {
+            steps {
+                sh 'mvn -f maven-tomcat/pom.xml clean package'
+            }
+            post {
+                success {
+                    echo "Now Archiving the Artifacts...."
+                    archiveArtifacts artifacts: '**/*.war'
                 }
             }
         }
+    }
 }
