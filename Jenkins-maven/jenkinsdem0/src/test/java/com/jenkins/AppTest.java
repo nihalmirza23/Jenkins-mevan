@@ -36,4 +36,10 @@ public class AppTest
     {
         assertEquals(0, 0);
     }
+    
+    @Test
+    public void shouldAnswerWithtrue()
+    {
+        assertEquals(0, 0);
+    }
 }
