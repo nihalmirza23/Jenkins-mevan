@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+        stages {
+            stage('Build Application') {
+                steps {
+                    sh 'mvn -f tomcat-maven2/tomcat/pom.xml test package'
+                }
+                post {
+                    success {
+                        echo 'Archiving the artifacts'
+                        archiveArtifacts artifacts: '**/*.war'
+                    }
+                }
+            }
+            stage('deploy application in staging'){
+                steps{
+                    echo "Building the staging job"
+                    build job:'Deploy-application-staging'
+                }
+            }
+        }
+}
