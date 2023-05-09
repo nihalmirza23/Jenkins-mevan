@@ -1,23 +1,18 @@
 pipeline{
     agent any
     stages{
-        stage("init"){
+        stage('Init'){
             steps{
-                echo "Hi, This is Nihal from Dev-ops"
-                echo "We are starting for testing"
+                echo 'Hi, This is Nihal from Dev-ops'
+                echo 'We are starting for testing'
             }
         }
-        stage("Build"){
+        stage('Build') {
             steps{
-                echo "Building simple maven project"
+                echo 'Building Sample Maven Project'
             }
         }
-        stage("Deploy in staging enviorment"){
-            steps{
-                echo "Building Deploying in staging enviorment"
-            }
-        }
-        stage("Deploy in staging enviorment"){
+        stage('Deploy'){
             steps{
                 echo "Building Deploying in staging enviorment"
             }
