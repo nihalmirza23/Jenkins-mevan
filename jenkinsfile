@@ -1,0 +1,26 @@
+pipeline{
+    agent any
+    stages{
+        stage("init"){
+            steps{
+                echo "Hi, This is Nihal from Dev-ops"
+                echo "We are starting for testing"
+            }
+        }
+        stage("Build"){
+            steps{
+                echo "Building simple maven project"
+            }
+        }
+        stage("Deploy in staging enviorment"){
+            steps{
+                echo "Building Deploying in staging enviorment"
+            }
+        }
+        stage("Deploy in staging enviorment"){
+            steps{
+                echo "Building Deploying in staging enviorment"
+            }
+        }
+    }
+}
