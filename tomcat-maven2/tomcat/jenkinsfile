@@ -12,11 +12,5 @@ pipeline {
                     }
                 }
             }
-            stage('deploy application in staging'){
-                steps{
-                    echo "Building the staging job"
-                    build job:'Deploy-application-staging'
-                }
-            }
         }
 }
